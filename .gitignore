@@ -1,0 +1,15 @@
+target
+build
+history
+.gradle
+.idea
+lib
+target
+*.iml
+*.iws
+*.log
+out
+.DS_Store
+.project
+.classpath
+bin

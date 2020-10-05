@@ -76,29 +76,4 @@ public class ParameterTypeDefinitions {
         if (entry.get("Delayed By") == null) { return Duration.ZERO; }
         return Duration.parse("PT" + entry.get("Delayed By"));
     }
-
-
-    @Then("{} asks for the following flight to be credited to his account:")
-    public void asksForTheFollowingFlightToBeCreditedToHisAccount(String name, List<PastFlight> requestedFlights) {
-    }
-
-    @Then("the flight should be considered (.*)")
-    public void theFlightShouldBeConsideredEligibility(String eligibility) {
-    }
-
-    @Then("only the following flights should be credited:")
-    public void onlyTheFollowingFlightsShouldBeCredited(List<PastFlight> requestedFlights) {
-    }
-
-    @Given("{} has travelled on the following flights:")
-    public void travelledOnTheFollowingFlights(String name, List<PastFlight> flights) {
-    }
-
-    @When("the flight is credited to his/her account")
-    public void theFlightIsCredited() {
-    }
-
-    @Then("she should be credited with {int} additional points")
-    public void shouldBeCreditedWithExtraPointsAdditionalPoints(int extraPoints) {
-    }
 }

@@ -37,16 +37,6 @@ Feature: Earning Frequent Flyer points from flights
 
   Scenario Outline: Higher frequent flyer status levels earn more points
     Given Tracy is a <Status> Frequent Flyer member
-    When she flies from London to New York in Business class
-    Then she should earn <Points Earned> points
-    Examples:
-      | Status   | Points Earned |
-      | Standard | 800           |
-      | Silver   | 1200          |
-      | Gold     | 1600          |
-
-  Scenario Outline: Higher frequent flyer status levels earn more points
-    Given Tracy is a <Status> Frequent Flyer member
     When she flies from <From> to <To> in Business class
     Then she should earn <Points Earned> points
     Examples:
@@ -78,7 +68,7 @@ Feature: Earning Frequent Flyer points from flights
 
   Scenario: Completed flights in the past 90 days can be claimed
     Given Todd joined the Frequent Flyer programme on 2020-01-01
-    When Todd asks for the following flight to be credited to his account:
+    When he asks for the following flight to be credited to his account:
       | Flight Number | Date       | Status    |
       | FH-101        | 2019-12-01 | COMPLETED |
       | FH-102        | 2019-12-01 | CANCELLED |

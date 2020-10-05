@@ -12,6 +12,5 @@ import org.springframework.test.context.ActiveProfiles;
 //        plugin = {"com.manning.bddinaction.frequentflyer.stepdefinitions.DatabaseServerHandler"},
         features = "classpath:features"
 )
-@SpringBootTest(classes = TestConfig.class)
-@ActiveProfiles("test")
+@SpringBootTest
 public class AcceptanceTestSuite {}

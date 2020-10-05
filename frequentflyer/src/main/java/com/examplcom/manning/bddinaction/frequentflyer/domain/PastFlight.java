@@ -2,6 +2,7 @@ package com.examplcom.manning.bddinaction.frequentflyer.domain;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class PastFlight {
     private String flightNumber;
@@ -36,5 +37,30 @@ public class PastFlight {
 
     public Duration getDelayedBy() {
         return delayedBy;
+    }
+
+    @Override
+    public String toString() {
+        return "PastFlight{" +
+                "flightNumber='" + flightNumber + '\'' +
+                ", scheduledDate=" + scheduledDate +
+                ", status=" + status +
+                ", wasDelayed=" + wasDelayed +
+                ", delayedBy=" + delayedBy +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PastFlight that = (PastFlight) o;
+        return Objects.equals(flightNumber, that.flightNumber) &&
+                Objects.equals(scheduledDate, that.scheduledDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(flightNumber, scheduledDate);
     }
 }
